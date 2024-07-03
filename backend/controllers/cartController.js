@@ -3,11 +3,15 @@ const Product = require('../models/Product');
 
 // Get user's shopping cart
 const getCart = async (req, res) => {
+  console.log(req.user.id)
   try {
+
     const cart = await Cart.findOne({ user: req.user.id }).populate('items.product');
     
     if (!cart) {
-      return res.status(404).json({ msg: 'Cart not found' });
+      const newCart = new Cart({ user: req.user.id, items: [] });
+      await newCart.save();
+      return res.json(newCart);
     }
 
     res.json(cart);
@@ -63,7 +67,6 @@ const removeItemFromCart = async (req, res) => {
       return res.status(404).json({ msg: 'Cart not found' });
     }
 
-    // Filter out the item to be removed
     cart.items = cart.items.filter(item => item._id.toString() !== id);
 
     await cart.save();

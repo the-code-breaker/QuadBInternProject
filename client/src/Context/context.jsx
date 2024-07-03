@@ -6,12 +6,14 @@ const serverApi = config.serverApi;
 
 const ProductProvider = ({ children }) => {
     const [user, setUser] = useState();
-    const [cart, setCart] = useState();
+    const [cart, setCart] = useState([]);
     const [products, setProducts] = useState([]);
     const fetchData = async () =>{
       const res = await axios.get(`${serverApi}/products`);
       const data = JSON.parse(localStorage.getItem('userInfo'));
             const token = data?.token;
+            console.log(`${serverApi}/cart`)
+
             const response = await axios.get(
               `${serverApi}/cart`,
               {

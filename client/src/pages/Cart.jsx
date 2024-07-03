@@ -28,7 +28,7 @@ const Cart = () => {
           },
         }
       );
-      setItems(response.data.items);
+      setItems(response?.data?.items);
     } catch (error) {
       console.error('Error fetching cart data:', error);
     }
@@ -41,7 +41,7 @@ const Cart = () => {
   useEffect(() => {
     const calculateTotalPrice = () => {
       let totalPrice = items.reduce((acc, item) => {
-        return acc + item.product?.price * item?.quantity;
+        return acc + item?.product?.price * item?.quantity;
       }, 0);
       setPrice(totalPrice);
     };
