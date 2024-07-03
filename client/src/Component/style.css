@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .navbar-heading {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .navbar-heading img {
+    margin-right: 10px;
+  }
+  
+  .navbar-heading h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .navList {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navList p {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .navList img {
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
+  .navList h2 {
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  .navList button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navList button:hover {
+    background-color: #c82333;
+  }
+  
+
+  /* product Box css */
+
+  /* style.css */
+
+.productBox {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .productBox h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .productBox p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .productBox h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .productBox button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .productBox button:hover {
+    background-color: #0056b3;
+  }
+  
+  .productBox input,
+  .productBox textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .productBox input[type='number'] {
+    width: calc(100% - 16px); /* Adjust input width for number type */
+  }
+  
+  .productBox .edit-form {
+    margin-top: 10px;
+  }
+  
+  .productBox .edit-form button {
+    margin-top: 10px;
+  }
+  
+
+  /* Login Page Css */
+  /* style.css */
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"],
+  .login-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  .login-container button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .register-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* Register Page Css */
+  /* style.css */
+.register-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .register-container input[type="text"],
+  .register-container input[type="password"],
+  .register-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  .register-container button {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .register-container button:hover {
+    background-color: #218838;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .login-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  

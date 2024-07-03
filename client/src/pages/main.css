@@ -1,0 +1,128 @@
+/* Admin Panel Css */
+/* style.css */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: calc(100% - 12px);
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
+  }
+  
+  .form-group button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-group button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  /* products css */
+  /* style.css */
+
+.filter-section {
+    margin-bottom: 20px;
+  }
+  
+  .filter-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .filter-section input[type='text'],
+  .filter-section button {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .productList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .productBox {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .productBox h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .productBox p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .productBox h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .productBox button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .productBox button:hover {
+    background-color: #0056b3;
+  }
+  
+  .productBox input[type='text'],
+  .productBox textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .productBox input[type='number'] {
+    width: calc(100% - 16px); 
+  }
+  
