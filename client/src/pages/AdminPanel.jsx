@@ -3,7 +3,8 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import './main.css';
 import Navbar from '../Component/Navbar';
-
+import config from '../config/config';
+const serverApi = config.serverApi;
 const AdminPanel = () => {
   const data = JSON.parse(localStorage.getItem('userInfo'));
   const admin = data?.user?.isAdmin;
@@ -32,7 +33,7 @@ const AdminPanel = () => {
       };
 
       const response = await axios.post(
-        'http://localhost:5000/api/products',
+        `${serverApi}/products`,
         newProduct,
         {
           headers: headers,
@@ -41,7 +42,7 @@ const AdminPanel = () => {
 
       toast.success('New Product Added Successfully', {
         position: 'top-right',
-        autoClose: 3000, // Close the toast after 3 seconds
+        autoClose: 3000, 
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -50,7 +51,6 @@ const AdminPanel = () => {
       });
 
       console.log('Product added:', response.data);
-      // Optionally, show a success message or update local state
       setNewProduct({
         name: '',
         description: '',

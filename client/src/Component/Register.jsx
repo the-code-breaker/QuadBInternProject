@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 import './style.css'; // Import CSS file
 import Home from '../pages/Home';
 import { ProductState } from '../Context/context';
-
+import config from '../config/config';
+const serverApi = config.serverApi;
 const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -15,12 +16,12 @@ const Register = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
+      const response = await axios.post(`${serverApi}/auth/register`, {
         username: username,
         password: password
       });
 
-      localStorage.setItem('userInfo', JSON.stringify(response.data)); // Store response.data
+      localStorage.setItem('userInfo', JSON.stringify(response.data));
       setPassword('');
       setUsername('');
       toast('User Registered Successfully', {

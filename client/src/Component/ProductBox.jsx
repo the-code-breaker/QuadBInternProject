@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { ProductState } from '../Context/context';
 import './style.css'; // Import CSS file
-
+import config from '../config/config';
+const serverApi = config.serverApi;
 const ProductBox = ({ value }) => {
   const { user,cart,setCart, products, setProducts } = ProductState();
   const [isEditing, setIsEditing] = useState(false);
@@ -18,7 +19,7 @@ const ProductBox = ({ value }) => {
       const data = JSON.parse(localStorage.getItem('userInfo')); 
       const token = data?.token;
       const response = await axios.post(
-        'http://localhost:5000/api/cart', 
+        `${serverApi}/cart`, 
         { productId },
         {
           headers: {
@@ -45,7 +46,7 @@ const ProductBox = ({ value }) => {
         Authorization: token,
       };
 
-      const response = await axios.delete(`http://localhost:5000/api/products/${productId}`, {
+      const response = await axios.delete(`${serverApi}/products/${productId}`, {
         headers: headers,
       });
       const filterData = products.filter((e) => e._id !== productId);
@@ -78,7 +79,7 @@ const ProductBox = ({ value }) => {
       };
 
       const response = await axios.put(
-        `http://localhost:5000/api/products/${value._id}`,
+        `${serverApi}/products/${value._id}`,
         editedProduct,
         {
           headers: headers,

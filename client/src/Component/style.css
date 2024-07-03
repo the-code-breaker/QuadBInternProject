@@ -12,6 +12,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    flex-wrap: wrap;
   }
   
   .navbar-heading {
@@ -33,6 +34,7 @@ body{
   .navList {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
   
   .navList p {

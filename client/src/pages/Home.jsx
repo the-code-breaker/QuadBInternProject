@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from '../Component/Navbar';
 import Product from './Products';
 import Login from '../Component/Login';
+import Footer from './Footer';
 
 const Home = () => {
     const [user, setUser] = useState([]);
@@ -17,6 +18,7 @@ const Home = () => {
     <>
     <Navbar/>
     <Product/>
+    <Footer/>
     </>
   )
 }
